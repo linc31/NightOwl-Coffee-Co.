@@ -1,0 +1,16 @@
+
+
+<h1>PRODUCTSSSSS</h1>
+
+
+<ul>
+<% @products.each do |product| %>
+<li> 
+<%= product.prodName %> <br>
+<%= product.prodDesc %> <br>
+<%= product.unitPrice %>
+</li>
+<%= link_to "Need This!", orders_path %>
+<% end %>
+</ul>
+
