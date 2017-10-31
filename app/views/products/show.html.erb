@@ -1,0 +1,16 @@
+
+
+<h1> SUP </h1>
+
+<%= @product.prodName %> <br>
+<%= @product.prodDesc %> <br>
+<%= @product.unitPrice %> <br>
+
+<%= flash[:notice] %>
+<%= form_tag("/add_item/#{@product.id}") do %>
+    <%= select_tag "quantity", options_for_select((1...11).map{|x| [x.to_s, x]}) %>
+        <%= submit_tag 'Add to cart' %>
+
+<% end %>
+
+<%= link_to 'Back', products_path %>

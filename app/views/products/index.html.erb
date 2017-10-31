@@ -6,11 +6,16 @@
 <ul>
 <% @products.each do |product| %>
 <li> 
+<%= link_to "show me da monaayyyy", product_path(product.id) %>
 <%= product.prodName %> <br>
 <%= product.prodDesc %> <br>
 <%= product.unitPrice %>
 </li>
-<%= link_to "Need This!", orders_path %>
+
+<%= form_tag("/add_item/#{product.id}") do %>
+    <%= submit_tag 'Add to cart' %>
+<% end %>
+
 <% end %>
 </ul>
 

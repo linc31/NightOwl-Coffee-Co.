@@ -1,0 +1,12 @@
+<h1> yo shopping cart </h1>
+<% @line_items.each do |line| %>
+<%= Product.find(line.product_id).prodName %>
+<%= line.quantity %>
+<%= form_tag("/remove_item/#{line.id}") do %>
+    <%= submit_tag 'GTFO' %>
+<% end %>
+<% end %>
+
+<%= form_tag("/purchase/active_order") do %>
+<%= submit_tag "Buy this ish" %>
+<% end %>
