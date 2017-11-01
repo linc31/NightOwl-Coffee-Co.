@@ -11,4 +11,3 @@ LineItem.destroy_all
 Product.create! id: 1, prodName: "Nocturnal", prodDesc: "Strong AF", unitPrice: 18.0
 Product.create! id: 2, prodName: "Black Eye", prodDesc: "Stay up for days!", unitPrice: 18.0
 Product.create! id: 3, prodName: "All-Nighter", prodDesc: "All day, all night!", unitPrice: 18.0
-Product.create! id: 4, prclodName: "Rude Awakening", prodDesc: "Wake up, mofo", unitPrice: 18.0
