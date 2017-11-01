@@ -15,6 +15,10 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ @import url(https://fonts.googleapis.com/css?family=Raleway:400,600);
+
+ $text: #303336;
+ $light-text: #8c98a8;
 
 
  body, html {
@@ -40,19 +44,34 @@
 .nav-item {
     color: white;
 }
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,600);
+
+$text: #303336;
+$light-text: #8c98a8;
+$button: #49B956;
+$button-hover: #60CF6F;
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/blurred_bg2.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
 .product-box {
-    font: 13px/23px "Raleway", Arial, sans-serif;
-    padding: 40px 0;
-    border: 2px solid red;
+  font: 13px/23px "Raleway", Arial, sans-serif;
+  color: $text;  
+  padding: 40px 0;
+  
 }
 .container {
-    margin: 0 auto;
-    width: 360px;
-    height: 560px;
-    background: white;
-    border-radius: 3px;
-    position: relative;
-    border: 2px solid rgb(109, 102, 102);
+  margin: 0 auto;
+  width: 300px;
+  height: 465px;
+  background: white;
+  border-radius: 3px;
+  position: relative
 }
 div {
     margin-top: 5px;
@@ -61,20 +80,19 @@ div {
   text-align: center;
   margin-top: 18px;
 }
-
 .name {
   font-size: 22px;
-  text-align: center;
 }
-
 .store {
   font-size: 16px;
   color: $light-text;
   margin-bottom: 28px;
-  text-align: center;
 }
-.text {
-    color: #123461;
-    text-align: center;
-    margin-top: 20px;
+.hero-image {
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    display: inline-block;
+    position: relative;
 }
+
+
