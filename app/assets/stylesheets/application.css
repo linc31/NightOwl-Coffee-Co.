@@ -16,17 +16,65 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
- .homepage {
+
+ body, html {
+    height: 100%;
+    margin: 0;
+}
+.bg {
     background-image: url("https://s3-us-west-1.amazonaws.com/paperclipp/users/images/000/000/001/original/Homepage.jpg");
+    height: 100%; 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
- }
- .logo {
-    background-image: url("https://s3-us-west-1.amazonaws.com/paperclipp/users/images/000/000/001/original/Nightowl_blk.svg");
+    background-color: rgb(173, 173, 173);
+    background-blend-mode: multiply;
+}
+#hero-text {
+    align-content: center;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 54%;
+    left: 43%;
     transform: translate(-50%, -50%);
- }
+}
+.nav-item {
+    color: white;
+}
+.product-box {
+    font: 13px/23px "Raleway", Arial, sans-serif;
+    padding: 40px 0;
+    border: 2px solid red;
+}
+.container {
+    margin: 0 auto;
+    width: 360px;
+    height: 560px;
+    background: white;
+    border-radius: 3px;
+    position: relative;
+    border: 2px solid rgb(109, 102, 102);
+}
+div {
+    margin-top: 5px;
+  }
+.information {
+  text-align: center;
+  margin-top: 18px;
+}
+
+.name {
+  font-size: 22px;
+  text-align: center;
+}
+
+.store {
+  font-size: 16px;
+  color: $light-text;
+  margin-bottom: 28px;
+  text-align: center;
+}
+.text {
+    color: #123461;
+    text-align: center;
+    margin-top: 20px;
+}

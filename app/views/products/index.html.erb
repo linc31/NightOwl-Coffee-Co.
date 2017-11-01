@@ -1,21 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
+		<title>NightOwl Coffee Co.</title>
+    <%= csrf_meta_tags %>
 
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+<br><br><br><br>
 
 <h1>PRODUCTSSSSS</h1>
 
-
-<ul>
-<% @products.each do |product| %>
-<li> 
-<%= link_to "show me da monaayyyy", product_path(product.id) %>
-<%= product.prodName %> <br>
-<%= product.prodDesc %> <br>
-<%= product.unitPrice %>
-</li>
-
-<%= form_tag("/add_item/#{product.id}") do %>
-    <%= submit_tag 'Add to cart' %>
+<div class="product-box d-flex justify-content-center">
+    <div class="container">
+<img src="https://s3-us-west-1.amazonaws.com/paperclipp/users/images/000/000/001/original/Noc.jpg" class="rounded img-fluid">
+<div class="name"><%= @products.find_by(id: 1).prodName %></div>
+<div class="store"><%= @products.find_by(id: 1).prodDesc %></div>
+<div class="store">$<%= @products.find_by(id: 1).unitPrice %></div>
+<%= link_to "Mo' Info", product_path(@products.find_by(id: 1)) %>
+<%= form_tag("/add_item/1") do %>
+    <%= submit_tag("Add to cart", :class => "btn btn-outline-success btn-block" ) %>
 <% end %>
+</div>
 
+<div class="container">
+<img src="https://s3-us-west-1.amazonaws.com/paperclipp/users/images/000/000/001/original/blkeye.jpg" class="rounded img-fluid">
+<div class="name"><%= @products.find_by(id: 2).prodName %></div>
+<div class="store"><%= @products.find_by(id: 2).prodDesc %></div>
+<div class="store"><%= @products.find_by(id: 2).unitPrice %></div>
+<%= link_to "Mo' Info", product_path(@products.find_by(id: 2)) %>
+<%= form_tag("/add_item/2") do %>
+<%= submit_tag("Add to cart", :class => "btn btn-outline-success btn-block" ) %>
 <% end %>
-</ul>
+</div>
+
+<div class="container">
+<img src="https://s3-us-west-1.amazonaws.com/paperclipp/users/images/000/000/001/original/allnight.jpg" class="rounded img-fluid">
+<div class="name"><%= @products.find_by(id: 3).prodName %></div>
+<div class="store"><%= @products.find_by(id: 3).prodDesc %></div>
+<div class="store"><%= @products.find_by(id: 3).unitPrice %></div>
+<%= form_tag("/add_item/3") do %>
+    <%= submit_tag("Add to cart", :class => "btn btn-outline-success btn-block" ) %>
+<% end %>
+<div class="text"><%= link_to "Mo' Info", product_path(@products.find_by(id: 3)) %></div>
+</div>
+
+</div>
+</body>
 
