@@ -1,0 +1,102 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+ @import url(https://fonts.googleapis.com/css?family=Raleway:400,600);
+
+ $text: #303336;
+ $light-text: #8c98a8;
+
+
+ body, html {
+    height: 100%;
+    margin: 0;
+}
+.bg {
+    background-image: url("https://s3-us-west-1.amazonaws.com/paperclipp/users/images/000/000/001/original/Homepage.jpg");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(173, 173, 173);
+    background-blend-mode: multiply;
+}
+#hero-text {
+    -ms-flex-line-pack: center;
+        align-content: center;
+    position: absolute;
+    top: 54%;
+    left: 43%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+}
+.nav-item {
+    color: white;
+}
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,600);
+
+$text: #303336;
+$light-text: #8c98a8;
+$button: #49B956;
+$button-hover: #60CF6F;
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/blurred_bg2.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+.product-box {
+  font: 13px/23px "Raleway", Arial, sans-serif;
+  color: $text;  
+  padding: 40px 0;
+  
+}
+.container {
+  margin: 0 auto;
+  width: 300px;
+  height: 465px;
+  background: white;
+  border-radius: 3px;
+  position: relative
+}
+div {
+    margin-top: 5px;
+  }
+.information {
+  text-align: center;
+  margin-top: 18px;
+}
+.name {
+  font-size: 22px;
+}
+.store {
+  font-size: 16px;
+  color: $light-text;
+  margin-bottom: 28px;
+}
+.hero-image {
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    display: inline-block;
+    position: relative;
+}
+
+
