@@ -1,0 +1,109 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+ @import url(https://fonts.googleapis.com/css?family=Raleway:400,600);
+
+
+ body, html {
+    height: 100%;
+    margin: 0;
+}
+.bg {
+    background-image: url("https://s3-us-west-1.amazonaws.com/paperclipp/users/images/000/000/001/original/Homepage.jpg");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(173, 173, 173);
+    background-blend-mode: multiply;
+}
+.homepage {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    float: left;
+    background: #3B4B7E;
+    height: 100%;
+    z-index: 10000;
+}
+.bg-show {
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(173, 173, 173);
+    background-blend-mode: multiply;
+    width: 50%;
+    float: left;
+    padding: 25px;
+    position: relative;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    background-size: cover;
+}
+.bg-image-1 {
+    background-image: url("https://s3-us-west-1.amazonaws.com/paperclipp/users/images/000/000/001/original/nathan-dumlao-363125.jpg");
+}
+.bg-image-2 {
+    background-image: url("https://s3-us-west-1.amazonaws.com/paperclipp/users/images/000/000/001/original/alexandra-gorn-325610.jpg");
+}
+.bg-image-3 {
+    background-image: url("https://s3-us-west-1.amazonaws.com/paperclipp/users/images/000/000/001/original/maria-fernanda-gonzalez-140902.jpg");
+}
+.bg-image-4 {
+    background-image: url("https://s3-us-west-1.amazonaws.com/paperclipp/users/images/000/000/001/original/tyler-nix-340716.jpg");
+}
+.rightHalf {
+    background: #3B4B7E;
+    width: 50%;
+    float: left;
+    height: 100%;
+    padding: 25px;
+    position: relative;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+}
+#hero-text {
+    -ms-flex-line-pack: center;
+        align-content: center;
+    position: absolute;
+    top: 54%;
+    left: 43%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+}
+.nav-item {
+    color: white;
+}
+.back {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background: -webkit-gradient( linear, left top, right bottom, color-stop(50%, #465481), color-stop(50%, #3B4B7E));
+    background: linear-gradient( to right bottom, #465481 50%, #3B4B7E 50%);
+    background-repeat: repeat;
+  }
+#alert {
+    color: #692327;
+    text-align: center;
+    padding: 5px 0;
+}
+.desc {
+    max-width: 50%;
+}
