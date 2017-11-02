@@ -17,9 +17,6 @@
  @import "bootstrap";
  @import url(https://fonts.googleapis.com/css?family=Raleway:400,600);
 
- $text: #303336;
- $light-text: #8c98a8;
-
 
  body, html {
     height: 100%;
@@ -34,6 +31,53 @@
     background-color: rgb(173, 173, 173);
     background-blend-mode: multiply;
 }
+.homepage {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    float: left;
+    background: #3B4B7E;
+    height: 100%;
+    z-index: 10000;
+}
+.bg-show {
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(173, 173, 173);
+    background-blend-mode: multiply;
+    width: 50%;
+    float: left;
+    padding: 25px;
+    position: relative;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    background-size: cover;
+}
+.bg-image-1 {
+    background-image: url("https://s3-us-west-1.amazonaws.com/paperclipp/users/images/000/000/001/original/nathan-dumlao-363125.jpg");
+}
+.bg-image-2 {
+    background-image: url("https://s3-us-west-1.amazonaws.com/paperclipp/users/images/000/000/001/original/alexandra-gorn-325610.jpg");
+}
+.bg-image-3 {
+    background-image: url("https://s3-us-west-1.amazonaws.com/paperclipp/users/images/000/000/001/original/maria-fernanda-gonzalez-140902.jpg");
+}
+.bg-image-4 {
+    background-image: url("https://s3-us-west-1.amazonaws.com/paperclipp/users/images/000/000/001/original/tyler-nix-340716.jpg");
+}
+.rightHalf {
+    background: #3B4B7E;
+    width: 50%;
+    float: left;
+    height: 100%;
+    padding: 25px;
+    position: relative;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+}
 #hero-text {
     align-content: center;
     position: absolute;
@@ -44,55 +88,18 @@
 .nav-item {
     color: white;
 }
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,600);
-
-$text: #303336;
-$light-text: #8c98a8;
-$button: #49B956;
-$button-hover: #60CF6F;
-
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-
-body {
-  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/blurred_bg2.jpg') no-repeat center center fixed;
-  background-size: cover;
-}
-.product-box {
-  font: 13px/23px "Raleway", Arial, sans-serif;
-  color: $text;  
-  padding: 40px 0;
-  
-}
-.container {
-  margin: 0 auto;
-  width: 300px;
-  height: 465px;
-  background: white;
-  border-radius: 3px;
-  position: relative
-}
-div {
-    margin-top: 5px;
+.back {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient( to right bottom, #465481 50%, #3B4B7E 50%);
+    background-repeat: repeat;
   }
-.information {
-  text-align: center;
-  margin-top: 18px;
+#alert {
+    color: #692327;
+    text-align: center;
+    padding: 5px 0;
 }
-.name {
-  font-size: 22px;
+.desc {
+    max-width: 50%;
 }
-.store {
-  font-size: 16px;
-  color: $light-text;
-  margin-bottom: 28px;
-}
-.hero-image {
-    border-top-right-radius: 3px;
-    border-top-left-radius: 3px;
-    display: inline-block;
-    position: relative;
-}
-
-

@@ -1,71 +1,83 @@
-<!DOCTYPE html>
-<html>
-  <head>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
-		<title>NightOwl Coffee Co.</title>
-    <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-  <body>
-<br><br><br><br>
-
-<h1>PRODUCTSSSSS</h1>
-
-<div class="product-box d-flex justify-content-center">
-    <div class="container">
-<img src="https://s3-us-west-1.amazonaws.com/paperclipp/users/images/000/000/001/original/Noc.jpg" class="rounded img-fluid">
-<div class="name"><%= @products.find_by(id: 1).prodName %></div>
-<div class="store"><%= @products.find_by(id: 1).prodDesc %></div>
-<div class="store">$<%= @products.find_by(id: 1).unitPrice %></div>
-<%= link_to "Mo' Info", product_path(@products.find_by(id: 1)) %>
-<%= form_tag("/add_item/1") do %>
-    <%= submit_tag("Add to cart", :class => "btn btn-outline-success btn-block" ) %>
-<% end %>
-</div>
-
-<div class="container">
-<img src="https://s3-us-west-1.amazonaws.com/paperclipp/users/images/000/000/001/original/blkeye.jpg" class="rounded img-fluid">
-<div class="name"><%= @products.find_by(id: 2).prodName %></div>
-<div class="store"><%= @products.find_by(id: 2).prodDesc %></div>
-<div class="store"><%= @products.find_by(id: 2).unitPrice %></div>
-<%= link_to "Mo' Info", product_path(@products.find_by(id: 2)) %>
-<%= form_tag("/add_item/2") do %>
-<%= submit_tag("Add to cart", :class => "btn btn-outline-success btn-block" ) %>
-<% end %>
-</div>
-
-<div class="container">
-<img src="https://s3-us-west-1.amazonaws.com/paperclipp/users/images/000/000/001/original/allnight.jpg" class="rounded img-fluid">
-<div class="name"><%= @products.find_by(id: 3).prodName %></div>
-<div class="store"><%= @products.find_by(id: 3).prodDesc %></div>
-<div class="store"><%= @products.find_by(id: 3).unitPrice %></div>
-<%= form_tag("/add_item/3") do %>
-    <%= submit_tag("Add to cart", :class => "btn btn-outline-success btn-block" ) %>
-<% end %>
-<div class="text"><%= link_to "Mo' Info", product_path(@products.find_by(id: 3)) %></div>
-</div>
-
-</div>
-<div class="product-box">
-  <div class="container">
-    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/furniture.jpg" alt="cookies" class="hero-image" />
-    
-    <div class="price">$ <div>95</div></div>
-    
-    <div class="information">
-
-      <div class="name">Amazing Furniture</div>
-      
-      <div class="store">ikea.com</div>
-      
-      <a href="#" class="button">Purchase Product</a>
-      
-    </div> <!-- end information -->
-  </div> <!-- end container -->
-</div> 
+<body>
+	<div class="back">
+		<br><br><br><br>
+		<h1 class="display-4 text-center text-white">Spillin' Beans</h1>
+		<br>
+		<div class="container-fluid">
+			<div class="card-deck">
+				<div class="card">
+					<img class="card-img-top" src="https://s3-us-west-1.amazonaws.com/paperclipp/users/images/000/000/001/original/Noc.jpg">
+					<div class="card-body">
+						<div class="h2 text-center">
+							<%= @products.find_by(id: 1).prodName %>
+						</div>
+						<div class="lead text-center text-muted">
+							<em><%= @products.find_by(id: 1).prodDesc %></em>
+						</div>
+						<div class="lead text-center">
+							$<%= @products.find_by(id: 1).unitPrice %>0
+						</div><%= form_tag("/add_item/1") do %><br>
+						<%= submit_tag("Add to cart", :class => "btn btn-outline-dark btn-block" ) %> <%end %><br>
+						<div class="text-center">
+							<%= link_to "Details", product_path(@products.find_by(id: 1)) %>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<img class="card-img-top" src="https://s3-us-west-1.amazonaws.com/paperclipp/users/images/000/000/001/original/blkeye.jpg">
+					<div class="card-body">
+						<div class="h2 text-center">
+							<%= @products.find_by(id: 2).prodName %>
+						</div>
+						<div class="lead text-center text-muted">
+							<em><%= @products.find_by(id: 2).prodDesc %></em>
+						</div>
+						<div class="lead text-center">
+							$<%= @products.find_by(id: 2).unitPrice %>0
+						</div><%= form_tag("/add_item/2") do %><br>
+						<%= submit_tag("Add to cart", :class => "btn btn-outline-dark btn-block" ) %> <%end %><br>
+						<div class="text-center">
+							<%= link_to "Details", product_path(@products.find_by(id: 2)) %>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<img class="card-img-top" src="https://s3-us-west-1.amazonaws.com/paperclipp/users/images/000/000/001/original/allnight.jpg">
+					<div class="card-body">
+						<div class="h2 text-center">
+							<%= @products.find_by(id: 3).prodName %>
+						</div>
+						<div class="lead text-center text-muted">
+							<em><%= @products.find_by(id: 3).prodDesc %></em>
+						</div>
+						<div class="lead text-center">
+							$<%= @products.find_by(id: 3).unitPrice %>0
+						</div><%= form_tag("/add_item/3") do %><br>
+						<%= submit_tag("Add to cart", :class => "btn btn-outline-dark btn-block" ) %> <%end %><br>
+						<div class="text-center">
+							<%= link_to "Details", product_path(@products.find_by(id: 3)) %>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<img class="card-img-top" src="https://s3-us-west-1.amazonaws.com/paperclipp/users/images/000/000/001/original/rude2.jpg">
+					<div class="card-body">
+						<div class="h2 text-center">
+							<%= @products.find_by(id: 4).prodName %>
+						</div>
+						<div class="lead text-center text-muted">
+							<em><%= @products.find_by(id: 4).prodDesc %></em>
+						</div>
+						<div class="lead text-center">
+							$<%= @products.find_by(id: 4).unitPrice %>0
+						</div><%= form_tag("/add_item/4") do %><br>
+						<%= submit_tag("Add to cart", :class => "btn btn-outline-dark btn-block" ) %> <%end %><br>
+						<div class="text-center">
+							<%= link_to "Details", product_path(@products.find_by(id: 4)) %>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
-

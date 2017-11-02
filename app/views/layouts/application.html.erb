@@ -14,7 +14,8 @@
   <body>
 	<nav class="navbar fixed-top" style="background-color: #343c5b;">
 		<a class="navbar-brand">
-      <img alt="" class="d-inline-block align-top" height="40" width="40" src="https://s3-us-west-1.amazonaws.com/paperclipp/users/images/000/000/001/original/Nightowl_logo.svg"></a>
+      <img alt="" class="d-inline-block align-top" height="40" width="40" src="https://s3-us-west-1.amazonaws.com/paperclipp/users/images/000/000/001/original/Nightowl_logo.svg">
+		</a>
 		<ul class="navbar-nav">
 			<li class="nav-item"> 
 				<%= link_to 'NIGHTOWL', root_path, {:style=>'color:#FFFFFF;', :class => "links"} %> 
@@ -24,11 +25,11 @@
 				<%= link_to 'Cart', line_items_path, {:style=>'color:#FFFFFF;', :class => "links"} %>
 			</li>
 		</ul>
-		<ul class="nav justify-content-end">
+		<ul class="nav">
 			<li class="nav-item">
 				<%if current_user %> Welcome, <%= current_user.name %>
 					&nbsp;&nbsp;|&nbsp;
-				<%= link_to 'Log Out', session_path('dummy'), method: :delete %>
+				<%= link_to 'Log Out', session_path('dummy'), method: :delete, :style=>'color:#FFFFFF' %>
 				<%else %> <%= link_to 'Log In', login_path, {:style=>'color:#FFFFFF;', :class => "links"} %>
 					&nbsp;&nbsp;|&nbsp;&nbsp; 
 				<%= link_to 'Sign Up', new_user_path, {:style=>'color:#FFFFFF;', :class => "links"} %>
@@ -36,7 +37,6 @@
 			</li>
 		</ul>
 	</nav>
-
     <%= yield %>
   </body>
 </html>
