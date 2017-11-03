@@ -1,24 +1,31 @@
-# README
+# NightOwl Coffee Co.
+Nightowl Coffee Co. E-commerce Application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Nightowl Coffee Co. is a web based e-commerce app built with Ruby on Rails.
 
-Things you may want to cover:
+Features:
+- Welcome page
+- List of products
+- Single product view
+- Add quantity for products
+- Add products to cart
+- Create new user (sign-up)
+- Log in / log out
 
-* Ruby version
+# Process
+![Nightowl process](https://s3-us-west-1.amazonaws.com/paperclipp/users/images/000/000/001/original/nightowl.gif)
 
-* System dependencies
+# Technologies Used
+- Ruby on Rails
+- HTML
+- CSS
+- Bootstrap
+- [Trello](https://trello.com/b/Yav425nW/coffee-app)
 
-* Configuration
+# Future Add-Ons
+- Stripe integration for check
+- Google & Facebook login
+- Transaction emails
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Demo the app
+Demo [NightOwl Coffee Co](https://evening-brook-50602.herokuapp.com/)
