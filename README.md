@@ -1,5 +1,4 @@
 # NightOwl Coffee Co.
-Nightowl Coffee Co. E-commerce Application
 
 Nightowl Coffee Co. is a web based e-commerce app built with Ruby on Rails.
 
