@@ -1,7 +1,6 @@
 <body>
 	<div class="bg-show img-fluid bg-image-<%= @product.id %>"></div>
-	<div class="rightHalf">
-		<br><br><br><br><br><br><br>
+	<div class="rightHalf"><br><br><br><br><br><br><br>
 		<h1 class="h2 text-white"><%= @product.prodName %></h1>
 		<div class="lead text-white">
 			<em><%= @product.prodDesc %></em>
@@ -11,13 +10,11 @@
 		</div><br>
 		<div class="display-4 text-white">
 			$<%= @product.unitPrice %>0
-		</div><br>
-		<br>
-		<br>
-		<%= form_tag("/add_item/#{@product.id}") do %>
+		</div><br><br><br>
+			<%= form_tag("/add_item/#{@product.id}") do %>
 		<p class="text-white">Quantity &nbsp; <%= select_tag "quantity", options_for_select((1...11).map{|x| [x.to_s, x]}), :class => "btn btn-secondary dropdown-toggle" %></p>
-        <%= submit_tag("Add to cart", :class => "btn btn-outline-light btn-lg" ) %>
-        <%end %>
+        	<%= submit_tag("Add to cart", :class => "btn btn-outline-light btn-lg" ) %>
+        	<%end %>
 		<br><br><br><br>
 		<div class="btn btn-secondary">
 			<%= link_to 'Back', products_path, {:style=>'color:#FFFFFF;'} %>

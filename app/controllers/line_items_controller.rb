@@ -30,9 +30,9 @@ class LineItemsController < ApplicationController
         if @current_cart_item.nil?
             @line_item = LineItem.new(order_id: active_order.id, product_id: params[:product_id], quantity: params[:quantity])
                 if @line_item.save
-                    redirect_to products_path #fix redirection for later 
+                    redirect_to products_path 
                 else
-                    redirect_to products_path #to do send back msg like Add Cart Unsuccessful
+                    redirect_to products_path
                 end
         else
             if @current_cart_item.update_attributes(quantity: params[:quantity])
@@ -51,7 +51,7 @@ class LineItemsController < ApplicationController
     def purchase
         current_user.orders.update(is_active: false)
         current_user.orders << Order.new(is_active: true)
-        redirect_to root_path #direct somewhere else
+        redirect_to root_path 
     end
 
     private
