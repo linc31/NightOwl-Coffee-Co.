@@ -19,6 +19,7 @@ Features:
 - HTML
 - CSS
 - Bootstrap
+- Heroku
 - [Trello](https://trello.com/b/Yav425nW/coffee-app)
 
 # Future Add-Ons
