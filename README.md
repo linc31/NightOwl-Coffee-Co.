@@ -28,4 +28,4 @@ Features:
 - Transaction emails
 
 # Demo the app
-Demo [NightOwl Coffee Co](https://evening-brook-50602.herokuapp.com/)
+Demo [NightOwl Coffee Co](https://nightowl-coffee.herokuapp.com/)
